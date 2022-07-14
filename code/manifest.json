@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Supreme Theme Extension for Chrome",
+  "description": "Supreme photoshoot images to spice your Google Chrome browser up!",
+  "version": "1.0",
+  "icons": {
+    "16": "/images/16.png",
+    "48": "/images/48.png",
+    "128": "/images/128.png"
+  },
+  "chrome_url_overrides": {
+    "newtab": "main.html"
+  },
+
+  "action": {
+    "default_icon": {
+      "16": "/images/16.png",
+      "48": "/images/48.png",
+      "128": "/images/128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.google.com/*"],
+      "css": ["main.css"]
+    }
+  ]
+}
